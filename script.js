@@ -17,40 +17,45 @@ conBtn.addEventListener("click", (el) => {
 
   let amount = inputAmount.value;
 
+  // Function to convert the amount
+  function convert(price) {
+    finalAmount.value = amount * price;
+  }
+
   // Using if statement
   // if (userChoice.value === "USD") {
-  //   finalAmount.value = amount * 48.86;
+  //   convert(48.86)
   // } else if (userChoice.value === "EUR") {
-  //   finalAmount.value = amount * 53.9;
+  //   convert(53.9)
   // } else if (userChoice.value === "SAR") {
-  //   finalAmount.value = amount * 13.02;
+  //   convert(13.02);
   // } else if (userChoice.value === "AED") {
-  //   finalAmount.value = amount * 13.3;
+  //   convert(13.3);
   // } else if (userChoice.value === "KWD") {
-  //   finalAmount.value = amount * 160.5;
+  //   convert(160.5);
   // } else if (userChoice.value === "QAR") {
-  //   finalAmount.value = amount * 13.42;
+  //   convert(13.42);
   // }
 
   // Using switch statement
   switch (userChoice.value) {
     case "USD":
-      finalAmount.value = amount * 48.86;
+      convert(48.86);
       break;
     case "EUR":
-      finalAmount.value = amount * 53.9;
+      convert(53.9);
       break;
     case "SAR":
-      finalAmount.value = amount * 13.02;
+      convert(13.02);
       break;
     case "AED":
-      finalAmount.value = amount * 13.3;
+      convert(13.3);
       break;
     case "KWD":
-      finalAmount.value = amount * 160.5;
+      convert(160.5);
       break;
     case "QAR":
-      finalAmount.value = amount * 13.42;
+      convert(13.42);
       break;
   }
 });
