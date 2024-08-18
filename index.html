@@ -1,0 +1,81 @@
+<!-- 
+* Currency Converter
+-- A tool to Convert currency of some countries to EGP.
+============================================
+Made with love by Mahmoud Maher © All Rights Reserved
+============================================
+Any Questions/Suggestions?  Contact me at "mahmoudmaherofficial@gmail.com"
+============================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <style>
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        appearance: none;
+        -moz-appearance: textfield;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="text-center my-5 title fw-bold text-primary">
+        Currency Converter
+      </h1>
+      <div class="row">
+        <div class="col">
+          <label for="from" class="form-label">From:</label>
+          <select id="from" class="form-select">
+            <option value="USD">USD</option>
+            <option value="SAR">SAR</option>
+            <option value="AED">AED</option>
+            <option value="KWD">KWD</option>
+            <option value="EUR">EUR</option>
+            <option value="QAR">QAR</option>
+          </select>
+        </div>
+        <div class="col mb-4">
+          <label for="to" class="form-label">To:</label>
+          <select id="to" class="form-select" disabled>
+            <option value="EGP">EGP</option>
+          </select>
+        </div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="mb-3 input-group col">
+          <input
+            type="number"
+            value="0"
+            class="form-control"
+            id="from-amount"
+          />
+          <span class="input-group-text" id="basic-addon1">USD</span>
+        </div>
+        <div class="mb-3 input-group col">
+          <input
+            type="number"
+            class="form-control"
+            id="to-amount"
+            value="0"
+            disabled
+          />
+          <span class="input-group-text" id="basic-addon2">EGP</span>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary w-100" id="convert">
+        Convert
+      </button>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
